@@ -69,7 +69,7 @@
          
           <li class="dropdown"><a href="#"><span>Contact Us</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#contact">Visit us at</a></li>
+              <li><a href="#contact">Visit us at.</a></li>
               <li><a href="#sendusemail" style="scroll-padding-top: 200px;">Contact</a></li>
     
             </ul>

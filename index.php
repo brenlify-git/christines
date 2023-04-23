@@ -161,7 +161,7 @@
 
             <div class="content" style="text-align: justify; text-justify: inter-word;">
             <div class="section-title">
-            <h2 style="text-align: left;">Our Food Takes<span> the Spotlight</span></h2>
+            <h2 style="text-align: left;">Our Food Takesdfgdfgg<span> the Spotlight</span></h2>
             </div>
               <p>
               Filipinos have always had a deep love and appreciation for food. Our passion for cooking and enjoying meals with loved ones is deeply ingrained in our culture. From traditional family recipes passed down from generation to generation to modern twists on classic dishes, food is an essential part of our daily lives.              </p>

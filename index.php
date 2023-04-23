@@ -59,7 +59,7 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#about">Spotlight</a></li>
           <li><a class="nav-link scrollto" href="#menu">Menu</a></li>
           <li><a class="nav-link scrollto" href="#specials">Specials</a></li>
           <li><a class="nav-link scrollto" href="#events">Events</a></li>
@@ -831,7 +831,7 @@
 
         <div class="section-title">
           <h2><span>Contact</span> Us</h2>
-          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+          <p>Contact us with any questions or feedback. We're here to help and value your input. Use the contact information or form below to reach out to us. Thank you for choosing to communicate with us.</p>
         </div>
       </div>
       <div class="map" id="map">

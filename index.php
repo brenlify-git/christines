@@ -67,7 +67,7 @@
           <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
       
          
-          <li class="dropdown"><a href="#"><span>Contact Us</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#contact"><span>Contact Us</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#contact">Visit us at</a></li>
               <li><a href="#sendusemail" style="scroll-padding-top: 200px;">Send us a Feedback</a></li>
@@ -919,11 +919,11 @@
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
-      <h3>Delicious</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      <h3>Christine's Filipino Cuisine</h3>
+      <p></p>
       <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+       
+        <a href="https://www.facebook.com/CHRISTINESFILIPINO" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
         <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
         <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
         <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>

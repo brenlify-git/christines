@@ -65,8 +65,15 @@
           <li><a class="nav-link scrollto" href="#events">Events</a></li>
           <li><a class="nav-link scrollto" href="#chefs">Chefs</a></li>
           <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
-        
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+      
+         
+          <li class="dropdown"><a href="#"><span>Contact Us</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#contact">Visit us at</a></li>
+              <li><a href="#sendusemail" style="scroll-padding-top: 200px;">Contact</a></li>
+    
+            </ul>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -827,13 +834,13 @@
           <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
         </div>
       </div>
-      <div class="map">
+      <div class="map" id="map">
         <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3856.587592035368!2d120.82674571526162!3d14.848386374935956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339653550fb988f5%3A0x2e87556713bcfa1a!2sChristine&#39;s%20Filipino%20Cuisine!5e0!3m2!1sen!2sus!4v1680969871264!5m2!1sen!2sus" frameborder="0" allowfullscreen></iframe>
       </div>
+      <div class="sample"  id="sendusemail" style="margin-bottom: 90px;"> </div>
+      <div class="container mt-" >
 
-      <div class="container mt-5">
-
-        <div class="info-wrap">
+        <div class="info-wrap" >
           <div class="row">
             <div class="col-lg-3 col-md-6 info">
               <i class="bi bi-geo-alt"></i>

@@ -14,7 +14,7 @@
   <link href="assets/img/Christines.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i|Sofia" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i|Sofia|Montserrat:ital,wght@0,300;1,200" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -65,23 +65,7 @@
           <li><a class="nav-link scrollto" href="#events">Events</a></li>
           <li><a class="nav-link scrollto" href="#chefs">Chefs</a></li>
           <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
+        
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -106,7 +90,7 @@
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown"><span>Christine's</span> Filipino Cuisine</h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                <p class="animate__animated animate__fadeInUp">Christine's Filipino Cuisine is a family-owned business founded by the Sta. Ana Family, a prominent and respected family in the local community. The concept for the restaurant was sparked by their daughter, Christine Sta. Ana, and they eagerly opened their doors to the public on January 28, 2023, generating great anticipation and enthusiasm among the locals.</p>
                 <div>
                   <a class="btn-white animate__animated animate__fadeInUp scrollto" href="#menu">
                     Our Menu
@@ -123,8 +107,8 @@
           <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg);">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                <h2 class="animate__animated animate__fadeInDown">Savor the Flavors of the Philippines</h2>
+                <p class="animate__animated animate__fadeInUp">The restaurant specializes in serving authentic Filipino cuisine, offering a wide range of traditional Filipino dishes that are crafted with love and care. The menu is carefully curated to showcase the rich flavors and unique culinary heritage of the Philippines, providing a memorable dining experience for all guests.</p>
                 <div>
                   <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
                   <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
@@ -137,8 +121,8 @@
           <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg);">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                <h2 class="animate__animated animate__fadeInDown">Taste the Extraordinary, Dining Redefined</h2>
+                <p class="animate__animated animate__fadeInUp">To enhance the dining experience, Christine's Filipino Cuisine also features live band performances every weekend, creating a vibrant and lively ambiance for diners to enjoy. The restaurant has gained popularity not only among locals but also among food enthusiasts, and it has been featured in various video vlogs and food reviews, further establishing its reputation as a must-visit restaurant in the area.</p>
                 <div>
                   <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
                   <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
@@ -169,30 +153,28 @@
 
         <div class="row">
 
-          <div class="col-lg-5 align-items-stretch video-box" style='background-image: url("assets/img/about.jpg");'>
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+          <div class="col-lg-5 align-items-stretch video-box" style='background-image: url("assets/img/slide/slide-1.jpg");'>
+            <a href="https://www.facebook.com/galingbulacan/videos/875434390180840" target="_blank" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
           </div>
 
           <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
 
-            <div class="content">
-              <h3>Eum ipsam laborum deleniti <strong>velit pariatur architecto aut nihil</strong></h3>
+            <div class="content" style="text-align: justify; text-justify: inter-word;">
+            <div class="section-title">
+            <h2 style="text-align: left;">Our Food Takes<span> the Spotlight</span></h2>
+            </div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-              </p>
+              Filipinos have always had a deep love and appreciation for food. Our passion for cooking and enjoying meals with loved ones is deeply ingrained in our culture. From traditional family recipes passed down from generation to generation to modern twists on classic dishes, food is an essential part of our daily lives.              </p>
               <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
+              As time passes, our taste buds crave new and unique flavors that will surprise us. We seek out new culinary experiences that can provide a fresh take on our beloved traditional dishes. This is where Christine's Filipino Cuisine comes in. Their dishes are a perfect blend of traditional Filipino flavors with a modern twist, bringing something new and exciting to the table.
               </p>
               <ul>
-                <li><i class="bx bx-check-double"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li><i class="bx bx-check-double"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li><i class="bx bx-check-double"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                <li><i class="bx bx-check-double"></i> Filipino cuisine is a significant part of our culture and tradition, with a love for cooking and sharing meals.</li>
+                <li><i class="bx bx-check-double"></i> As our taste buds crave new experiences, Christine's Filipino Cuisine in Malolos offers a perfect blend of traditional and modern flavors.</li>
+                <li><i class="bx bx-check-double"></i> Experience a delicious fusion of old and new at Christine's Filipino Cuisine!</li>
               </ul>
               <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum
+              Christine's Filipino Cuisine offers a wide array of dishes that are purely Pinoy-tasting but with a modern twist. From appetizers to desserts, each dish is meticulously prepared to ensure a perfect blend of traditional and contemporary flavors. So come and experience the exciting fusion of old and new flavors at Christine's Filipino Cuisine!
               </p>
             </div>
 
@@ -552,7 +534,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Book a <span>Table</span></h2>
+          <h2>Reach us,<span> Your Feedback is Valued!</span></h2>
           <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
         </div>
 
@@ -877,30 +859,50 @@
               <p>+1 5589 55488 51<br>+1 5589 22475 14</p>
             </div>
           </div>
+          <div class="row">
+             <div class="col-lg-12">
+
+
+          <div class="card border-0">
+            <div class="card-body">
+
+            <form action="send.php" method="post" class="row g-3">
+              <div class="col-6">
+                  <label for="inputAddress5" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Juan Dela Cruz"
+                    required>
+                </div>
+
+                <div class="col-6">
+                  <label for="inputAddress5" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="juandelcruz@gmail.com"
+                    required>
+                </div>
+
+                <div class="col-12">
+                  <label for="inputAddress5" class="form-label">Subject</label>
+                  <input type="text" class="form-control" id="subject" name="subject" placeholder="Food Review"
+                    required>
+                </div>
+
+                <div class="col-12>
+                  <label for="inputAddress5" class="form-label">Message</label>
+                  <textarea type="number" class="form-control" id="message" name="message" style="height:100px"></textarea>
+                  
+                </div>
+           
+          
+          <div class="text-center">
+                  <button type="submit" class="btn btn-warning text-light" name="send">Send Feedback</button>
+                </div>
+              </form><!-- End Multi Columns Form -->
         </div>
 
-        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-          <div class="row">
-            <div class="col-md-6 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-            </div>
-            <div class="col-md-6 form-group mt-3 mt-md-0">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-            </div>
-          </div>
-          <div class="form-group mt-3">
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-          </div>
-          <div class="form-group mt-3">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-          </div>
-          <div class="my-3">
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your message has been sent. Thank you!</div>
-          </div>
-          <div class="text-center"><button type="submit">Send Message</button></div>
-        </form>
+
+      
+
+        
+         
 
       </div>
     </section><!-- End Contact Section -->

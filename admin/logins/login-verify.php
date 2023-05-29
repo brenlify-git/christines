@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 include '../config/connection.php';
 
 $Username = $_POST['Username'];
@@ -23,7 +23,6 @@ else{
     $_SESSION['messageLogin'] = "Invalid login credentials, try again!";
     header("Location:login.php");
     exit();
-
 }
 		
 	

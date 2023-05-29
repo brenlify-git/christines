@@ -1,5 +1,6 @@
 <?php
 include '../config/connection.php';
+session_start();
 
 if(!isset($_SESSION['userID'])){
 header("Location: ../logins/login.php");

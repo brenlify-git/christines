@@ -27,7 +27,7 @@ include '../config/connection.php';
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="../assets/css/login.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/util.css">
-	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+	<link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
 	<!--===============================================================================================-->
 </head>
@@ -41,7 +41,7 @@ include '../config/connection.php';
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="../assets/img/Logo_Login.png" alt="IMG">
+					<img src="../../assets/img/Christines.png" alt="IMG">
 				</div>
 
 				<form class="login100-form validate-form col-md-6" method="post" action="login-verify.php">
@@ -68,7 +68,7 @@ include '../config/connection.php';
 						</span>
 					</div>
 
-					<div class="text-center" style="color:#345ba3">
+					<div class="text-center" style="color:#ffffff">
 
 
 					<?php
@@ -81,18 +81,12 @@ include '../config/connection.php';
 					?>
                     </div>
 
-					
-
 				
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn" type="submit" name="login" >
 							Login
 						</button>
 					</div>
-					
-					
-					
-
 					<div class="text-center p-t-136">
 						<a class="txt2" href="https://national-u.edu.ph/" target="_blank">
 							Take a look to the current happenings.

@@ -105,7 +105,7 @@ textarea:focus:-moz-placeholder { color:transparent; }
 textarea:focus::-moz-placeholder { color:transparent; }
 textarea:focus:-ms-input-placeholder { color:transparent; }
 
-input::-webkit-input-placeholder { color: #999999; }
+input::-webkit-input-placeholder { color: #ffffff; }
 input:-moz-placeholder { color: #999999; }
 input::-moz-placeholder { color: #999999; }
 input:-ms-input-placeholder { color: #999999; }
@@ -168,16 +168,16 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #9053c7;
-  background: -webkit-linear-gradient(-135deg, #fabf27, #026ab2);
-  background: -o-linear-gradient(-135deg, #fabf27, #026ab2);
-  background: -moz-linear-gradient(-135deg, #fabf27, #026ab2);
-  background: linear-gradient(-135deg, #fabf27, #026ab2);
+  background: #ffffff;
+  /* background: -webkit-linear-gradient(-135deg, #474747, #8e8e8e);
+  background: -o-linear-gradient(-135deg, #474747, #8e8e8e);
+  background: -moz-linear-gradient(-135deg, #474747, #8e8e8e);
+  background: linear-gradient(-135deg, #474747, #8e8e8e); */
 }
 
 .wrap-login100 {
   width: 960px;
-  background: #fff;
+  background: #3d3d3d;
   border-radius: 10px;
   overflow: hidden;
 
@@ -211,7 +211,7 @@ iframe {
 .login100-form-title {
   font-family: Poppins-Bold;
   font-size: 24px;
-  color: #333333;
+  color: #ffffff;
   line-height: 1.2;
   text-align: left;
   width: 100%;
@@ -221,7 +221,7 @@ iframe {
 .login100-form-subtitle {
   font-family: Poppins-Regular;
   font-size: 17px;
-  color: #333333;
+  color: #ffffff;
   line-height: 1.2;
   text-align: left;
   width: 100%;
@@ -241,10 +241,10 @@ iframe {
   font-family: Poppins-Medium;
   font-size: 15px;
   line-height: 1.5;
-  color: #666666;
+  color: #fcfcfc;
   display: block;
   width: 100%;
-  background: #e6e6e6;
+  background: #474747;
   height: 50px;
   border-radius: 25px;
   padding: 0 30px 0 68px;
@@ -302,7 +302,7 @@ iframe {
   height: 100%;
   padding-left: 35px;
   pointer-events: none;
-  color: #666666;
+  color: #fefefe;
 
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;

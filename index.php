@@ -1,3 +1,15 @@
+<?php
+
+include 'admin/config/connection.php';
+
+$sql = "SELECT * FROM branding ORDER BY id DESC LIMIT 1";
+$logo = $conn->query($sql);
+
+$sqlMenu = "SELECT * FROM menu_list";
+$menu = $conn->query($sqlMenu);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -96,8 +108,17 @@
           <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg);">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown"><span>Christine's</span> Filipino Cuisine</h2>
-                <p class="animate__animated animate__fadeInUp">Christine's Filipino Cuisine is a family-owned business founded by the Sta. Ana Family, a prominent and respected family in the local community. The concept for the restaurant was sparked by their daughter, Christine Sta. Ana, and they eagerly opened their doors to the public on January 28, 2023, generating great anticipation and enthusiasm among the locals.</p>
+              
+                <?php
+                while($rows = mysqli_fetch_assoc($logo)):   
+                ?>
+
+              
+                <h2 class="animate__animated animate__fadeInDown"><?=$rows['brandName']; ?></h2>
+                <p class="animate__animated animate__fadeInUp"><?=$rows['brandName']; ?> is a family-owned business founded by the Sta. Ana Family, a prominent and respected family in the local community. The concept for the restaurant was sparked by their daughter, Christine Sta. Ana, and they eagerly opened their doors to the public on January 28, 2023, generating great anticipation and enthusiasm among the locals.</p>
+                <?php
+           endwhile;   
+        ?>
                 <div>
                   <a class="btn-white animate__animated animate__fadeInUp scrollto" href="#menu">
                     Our Menu
@@ -198,7 +219,7 @@
 
         <div class="section-title">
           <h2>Why choose <span>Our Restaurant</span></h2>
-          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+          <p>Choose Our Restaurant for an unparalleled dining experience, where exceptional cuisine, impeccable service, and a captivating ambiance come together to create unforgettable memories.</p>
         </div>
 
         <div class="row">
@@ -206,24 +227,24 @@
           <div class="col-lg-4">
             <div class="box">
               <span>01</span>
-              <h4>Lorem Ipsum</h4>
-              <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+              <h4>Exceptional Cuisine</h4>
+              <p>Our Restaurant, we take pride in serving exceptional cuisine crafted with the finest ingredients, prepared by skilled chefs who are passionate about creating unique and flavorful dishes that will tantalize your taste buds.</p>
             </div>
           </div>
 
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="box">
               <span>02</span>
-              <h4>Repellat Nihil</h4>
-              <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+              <h4>Impeccable Service</h4>
+              <p>We believe that exceptional dining experiences go beyond just the food, which is why our attentive and professional staff are dedicated to providing impeccable service that ensures your every need is met, making your time at Our Restaurant a truly enjoyable and hassle-free experience.</p>
             </div>
           </div>
 
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="box">
               <span>03</span>
-              <h4> Ad ad velit qui</h4>
-              <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+              <h4>Captivating Ambiance</h4>
+              <p>Our Restaurant, where a combination of thoughtful decor, warm lighting, and comfortable seating sets the stage for a memorable dining experience. Whether you're celebrating a special occasion or enjoying a casual meal, our captivating ambiance adds an extra touch of magic to your time with us.</p>
             </div>
           </div>
 
@@ -249,91 +270,26 @@
               <li data-filter=".filter-specialty">Specialty</li>
             </ul>
           </div>
-        </div>
+        </div>  
 
         <div class="row menu-container">
 
-          <div class="col-lg-6 menu-item filter-starters">
+
+        <?php
+            while($rowMenu = mysqli_fetch_assoc($menu)):   
+        ?>
+          <div class="col-lg-6 menu-item filter-<?= $rowMenu['dishCat'] ?>">
             <div class="menu-content">
-              <a href="#">Lobster Bisque</a><span>$5.95</span>
+              <a href="#"><?= $rowMenu['dishName']?></a><span>₱<?= $rowMenu['price'] ?></span>
             </div>
             <div class="menu-ingredients">
-              Lorem, deren, trataro, filede, nerada
+            <?= $rowMenu['shortDesc'] ?>
             </div>
           </div>
 
-          <div class="col-lg-6 menu-item filter-specialty">
-            <div class="menu-content">
-              <a href="#">Bread barrel</a><span>$6.95</span>
-            </div>
-            <div class="menu-ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </div>
-          </div>
-
-          <div class="col-lg-6 menu-item filter-starters">
-            <div class="menu-content">
-              <a href="#">Crab Cake</a><span>$7.95</span>
-            </div>
-            <div class="menu-ingredients">
-              A delicate crab cake served on a toasted roll with lettuce and tartar sauce
-            </div>
-          </div>
-
-          <div class="col-lg-6 menu-item filter-salads">
-            <div class="menu-content">
-              <a href="#">Caesar Selections</a><span>$8.95</span>
-            </div>
-            <div class="menu-ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </div>
-          </div>
-
-          <div class="col-lg-6 menu-item filter-specialty">
-            <div class="menu-content">
-              <a href="#">Tuscan Grilled</a><span>$9.95</span>
-            </div>
-            <div class="menu-ingredients">
-              Grilled chicken with provolone, artichoke hearts, and roasted red pesto
-            </div>
-          </div>
-
-          <div class="col-lg-6 menu-item filter-starters">
-            <div class="menu-content">
-              <a href="#">Mozzarella Stick</a><span>$4.95</span>
-            </div>
-            <div class="menu-ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </div>
-          </div>
-
-          <div class="col-lg-6 menu-item filter-salads">
-            <div class="menu-content">
-              <a href="#">Greek Salad</a><span>$9.95</span>
-            </div>
-            <div class="menu-ingredients">
-              Fresh spinach, crisp romaine, tomatoes, and Greek olives
-            </div>
-          </div>
-
-          <div class="col-lg-6 menu-item filter-salads">
-            <div class="menu-content">
-              <a href="#">Spinach Salad</a><span>$9.95</span>
-            </div>
-            <div class="menu-ingredients">
-              Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette
-            </div>
-          </div>
-
-          <div class="col-lg-6 menu-item filter-specialty">
-            <div class="menu-content">
-              <a href="#">Lobster Roll</a><span>$12.95</span>
-            </div>
-            <div class="menu-ingredients">
-              Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll
-            </div>
-          </div>
-
+        <?php
+        endwhile;
+        ?>
         </div>
 
       </div>
@@ -680,7 +636,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="member">
-              <div class="pic"><img src="assets/img/chefs/chefs-1.png" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/chefs/chefs-5.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Liam Robles</h4>
                 <span>Master Chef</span>
@@ -696,7 +652,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="member">
-              <div class="pic"><img src="assets/img/chefs/chefs-2.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/chefs/chefs-6.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Sarah Jhonson</h4>
                 <span>Patissier</span>
@@ -712,7 +668,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="member">
-              <div class="pic"><img src="assets/img/chefs/chefs-3.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/chefs/chefs-7.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>William Anderson</h4>
                 <span>Cook</span>

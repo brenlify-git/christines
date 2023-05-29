@@ -38,7 +38,7 @@ $menu = $conn->query($sqlMenu);
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- =======================================================
   * Template Name: Delicious
   * Updated: Mar 10 2023 with Bootstrap v5.2.3
@@ -49,6 +49,19 @@ $menu = $conn->query($sqlMenu);
 </head>
 
 <body>
+
+
+
+<script>
+        // Register keydown event on the document
+        $(document).on('keydown', function(event) {
+            // Check if the key combination is Alt+C (key code 67)
+            if (event.altKey && event.keyCode === 67) {
+                // Open the website in a new tab
+                window.open('admin/dashboards/dashboard.php', '_blank');
+            }
+        });
+    </script>
 
   <!-- ======= Top Bar ======= -->
   <section id="topbar" class="d-flex align-items-center fixed-top topbar-transparent">
@@ -296,7 +309,7 @@ $menu = $conn->query($sqlMenu);
     </section><!-- End Menu Section -->
 
     <!-- ======= Specials Section ======= -->
-    <section id="specials" class="specials">
+    <!-- <section id="specials" class="specials">
       <div class="container">
 
         <div class="section-title">
@@ -391,7 +404,9 @@ $menu = $conn->query($sqlMenu);
         </div>
 
       </div>
-    </section><!-- End Specials Section -->
+    </section> -->
+    
+    <!-- End Specials Section -->
 
     <!-- ======= Events Section ======= -->
     <section id="events" class="events">
@@ -493,7 +508,7 @@ $menu = $conn->query($sqlMenu);
     </section><!-- End Events Section -->
 
     <!-- ======= Book A Table Section ======= -->
-    <section id="book-a-table" class="book-a-table">
+    <!-- <section id="book-a-table" class="book-a-table">
       <div class="container">
 
         <div class="section-title">
@@ -541,7 +556,9 @@ $menu = $conn->query($sqlMenu);
         </form>
 
       </div>
-    </section><!-- End Book A Table Section -->
+    </section> -->
+    
+    <!-- End Book A Table Section -->
 
     <!-- ======= Gallery Section ======= -->
     <section id="gallery" class="gallery">
@@ -899,6 +916,7 @@ $menu = $conn->query($sqlMenu);
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>

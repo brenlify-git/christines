@@ -7,6 +7,9 @@ $logo = $conn->query($sql);
 
 $sqlMenu = "SELECT * FROM menu_list";
 $menu = $conn->query($sqlMenu);
+
+$sqlGallery = "SELECT * FROM imagegallery";
+$gallery = $conn->query($sqlGallery);
 ?>
 
 
@@ -86,7 +89,6 @@ $menu = $conn->query($sqlMenu);
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">Spotlight</a></li>
           <li><a class="nav-link scrollto" href="#menu">Menu</a></li>
-          <li><a class="nav-link scrollto" href="#specials">Specials</a></li>
           <li><a class="nav-link scrollto" href="#events">Events</a></li>
           <li><a class="nav-link scrollto" href="#chefs">Chefs</a></li>
           <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
@@ -103,8 +105,6 @@ $menu = $conn->query($sqlMenu);
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="#book-a-table" class="book-a-table-btn scrollto">Book a table</a>
-
     </div>
   </header><!-- End Header -->
 
@@ -118,7 +118,7 @@ $menu = $conn->query($sqlMenu);
         <div class="carousel-inner" role="listbox">
 
           <!-- Slide 1 -->
-          <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg);">
+          <div class="carousel-item active" style="background-image: url(assets/img/slide/s1.jpg);">
             <div class="carousel-container">
               <div class="carousel-content">
               
@@ -134,35 +134,32 @@ $menu = $conn->query($sqlMenu);
         ?>
                 <div>
                   <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
-                  <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- Slide 2 -->
-          <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg);">
+          <div class="carousel-item" style="background-image: url(assets/img/slide/s2.jpg);">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown">Savor the Flavors of the Philippines</h2>
                 <p class="animate__animated animate__fadeInUp">The restaurant specializes in serving authentic Filipino cuisine, offering a wide range of traditional Filipino dishes that are crafted with love and care. The menu is carefully curated to showcase the rich flavors and unique culinary heritage of the Philippines, providing a memorable dining experience for all guests.</p>
                 <div>
                   <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
-                  <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- Slide 3 -->
-          <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg);">
+          <div class="carousel-item" style="background-image: url(assets/img/slide/s3.jpg);">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown">Taste the Extraordinary, Dining Redefined</h2>
                 <p class="animate__animated animate__fadeInUp">To enhance the dining experience, Christine's Filipino Cuisine also features live band performances every weekend, creating a vibrant and lively ambiance for diners to enjoy. The restaurant has gained popularity not only among locals but also among food enthusiasts, and it has been featured in various video vlogs and food reviews, further establishing its reputation as a must-visit restaurant in the area.</p>
                 <div>
                   <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
-                  <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
                 </div>
               </div>
             </div>
@@ -190,7 +187,7 @@ $menu = $conn->query($sqlMenu);
 
         <div class="row">
 
-          <div class="col-lg-5 align-items-stretch video-box" style='background-image: url("assets/img/slide/slide-1.jpg");'>
+          <div class="col-lg-5 align-items-stretch video-box" style='background-image: url("assets/img/slide/s1.jpg");'>
             <a href="https://www.facebook.com/galingbulacan/videos/875434390180840" target="_blank" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
           </div>
 
@@ -567,69 +564,19 @@ $menu = $conn->query($sqlMenu);
 
         <div class="row g-0">
 
+        <?php
+            while($rowMenu = mysqli_fetch_assoc($gallery)):   
+        ?>
+
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-1.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+              <a href="<?= $rowMenu['imagePath'] ?>" class="gallery-lightbox">
+                <img src="<?= $rowMenu['imagePath'] ?>" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-2.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-3.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-4.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-5.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-6.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-7.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-8.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
+        <?php endwhile; ?>
 
         </div>
 
@@ -717,8 +664,7 @@ $menu = $conn->query($sqlMenu);
                 </div>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  Christine's Filipino Cuisine is a true haven for Filipino food enthusiasts. Their Adobo is a masterpiece, with tender chicken cooked in a flavorful soy-vinegar marinade that leaves a delightful tang on the palate. The warm and welcoming atmosphere adds to the overall enjoyment of the dining experience.                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
             </div><!-- End testimonial item -->
@@ -727,14 +673,13 @@ $menu = $conn->query($sqlMenu);
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
                 <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
+                <h4>Food Vlogger</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  When it comes to authentic Filipino cuisine, Christine's Filipino Cuisine stands out. The Sinigang, with its perfectly balanced sour broth and tender meat, is a true comfort food. The friendly staff and cozy setting make dining here a delightful experience.                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
             </div><!-- End testimonial item -->
@@ -743,14 +688,13 @@ $menu = $conn->query($sqlMenu);
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
                 <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
+                <h4>Visitor</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  Christine's Filipino Cuisine never fails to impress with their mouthwatering Lechon Kawali. The crispy pork belly is cooked to perfection, boasting a golden-brown exterior and tender, juicy meat inside. This dish alone is worth a visit, and the attentive service adds to the overall satisfaction.                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
             </div><!-- End testimonial item -->
@@ -759,14 +703,13 @@ $menu = $conn->query($sqlMenu);
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
                 <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
+                <h4>Foodie</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  Christine's Filipino Cuisine captures the essence of Filipino flavors in their Kare-Kare. The rich peanut sauce, paired with tender oxtail and vegetables, creates a harmonious combination that is both comforting and satisfying. The friendly staff and cozy atmosphere make dining here an absolute pleasure.                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
             </div><!-- End testimonial item -->
@@ -781,8 +724,7 @@ $menu = $conn->query($sqlMenu);
                 </div>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  At Christine's Filipino Cuisine, their Pancit Canton is a true delight. The stir-fried noodles are packed with flavorful ingredients, such as succulent shrimp, tender chicken, and fresh vegetables. The generous portions and attentive service make it a top choice for experiencing the best of Filipino cuisine.                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
             </div><!-- End testimonial item -->

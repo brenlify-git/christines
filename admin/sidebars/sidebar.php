@@ -64,11 +64,22 @@
                 <ul id="SET-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
                         <a href="../content-control/menu.php">
-                            <i class="bi bi-people" style="font-size: 15px;"></i>
+                            <i class="bi bi-menu-button-fill" style="font-size: 15px;"></i>
                             <span>Menu List</span>
                         </a>
                     </li>
                 </ul>
+
+                <ul id="SET-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="../content-control/food-gallery.php">
+                            <i class="bi bi-images" style="font-size: 15px;"></i>
+                            <span>Food Gallery</span>
+                        </a>
+                    </li>
+                </ul>
+
+
             </li><!-- End Tables Nav -->
 
             

@@ -1,4 +1,5 @@
 <?php 
+include 'admin/config/connection.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
@@ -27,13 +28,13 @@ if(isset($_POST["send"])){
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'brenlify.mail@gmail.com';
-    $mail->Password = 'ruvatbfaopgafclp';
+    $mail->Username = 'noreply.christines@gmail.com';
+    $mail->Password = 'zfnreeewohxjobqp';
     $mail->SMTPSecure = 'ssl';
     $mail->Port = 465;
 
     $mail->setFrom($_POST['email']);
-    $mail->addAddress('brenlify.mail@gmail.com');
+    $mail->addAddress('noreply.christines@gmail.com');
     $mail->isHTML(true);
 
     $mail->Subject = $_POST["subject"];
@@ -52,7 +53,17 @@ if(isset($_POST["send"])){
    Should you have any further questions or concerns, please feel free to contact us. We appreciate your patience as we work to address your feedback or inquiry.
    Once again, thank you for reaching out to us. We look forward to providing you with a satisfactory response." . "<br> <br> ". "Here is your ticket number: <b> <H3>". $randomString . "</H3></b> Sincerely, <br> <b>" . "Christine's Filipino Cuisine" . "</b> <br> Restaurant's Admin";
 
+
     $mail->send();
+
+    $username = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+
+    $sqlInsAdminAcc = "INSERT INTO feedbacks (username, email, subject, message) VALUES ('$username', '$email', '$subject', '$message')";
+    $result22=mysqli_query($conn, $sqlInsAdminAcc);
 
     echo 
     "
@@ -61,7 +72,8 @@ if(isset($_POST["send"])){
     document.location.href='index.php';
     </script>
     ";
-
 }
+
+
 
 ?>

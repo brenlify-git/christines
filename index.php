@@ -133,12 +133,8 @@ $menu = $conn->query($sqlMenu);
            endwhile;   
         ?>
                 <div>
-                  <a class="btn-white animate__animated animate__fadeInUp scrollto" href="#menu">
-                    Our Menu
-                  </a>
-                  <a class="btn-white animate__animated animate__fadeInUp scrollto" href="#book-a-table">
-                    Book a Table
-                  </a>
+                  <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
+                  <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
                 </div>
               </div>
             </div>

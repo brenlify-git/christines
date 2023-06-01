@@ -5,7 +5,7 @@ include '../config/connection.php';
 $Username = $_POST['Username'];
 $Pass = $_POST['Pass'];
 
-$select = mysqli_query($conn, "SELECT * FROM users WHERE username = '$Username' AND password = '$Pass'");
+$select = mysqli_query($conn, "SELECT * FROM users WHERE BINARY username = '$Username' AND BINARY password = '$Pass'");
 $row = mysqli_fetch_array($select);
 
 if(is_array($row)){
@@ -24,6 +24,4 @@ else{
     header("Location:login.php");
     exit();
 }
-		
-	
 ?>

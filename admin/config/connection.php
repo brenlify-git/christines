@@ -16,18 +16,18 @@
 //  echo "Connected";
 ?>
 <?php
-$servername = "localhost";
-$username = "u235219407_christines";
-$password = "Christines2023";
-$database = "u235219407_christines";
+// $servername = "localhost";
+// $username = "u235219407_christines";
+// $password = "Christines2023";
+// $database = "u235219407_christines";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
+// // Create connection
+// $conn = new mysqli($servername, $username, $password, $database);
 
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+// // Check connection
+// if ($conn->connect_error) {
+//   die("Connection failed: " . $conn->connect_error);
+// }
 
 // echo "Connected";
 ?>

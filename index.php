@@ -5,8 +5,11 @@ include 'admin/config/connection.php';
 $sql = "SELECT * FROM branding ORDER BY id DESC LIMIT 1";
 $logo = $conn->query($sql);
 
-$sqlMenu = "SELECT * FROM menu_list";
+$sqlMenu = "SELECT * FROM menu_list WHERE dishStatus = 'showed'";
 $menu = $conn->query($sqlMenu);
+
+$sqlFeedback = "SELECT * FROM feedbacks";
+$feedback = $conn->query($sqlFeedback);
 
 $sqlGallery = "SELECT * FROM imagegallery";
 $gallery = $conn->query($sqlGallery);
@@ -420,20 +423,18 @@ $gallery = $conn->query($sqlGallery);
                 <div class="col-lg-6 pt-4 pt-lg-0 content">
                   <h3>Birthday Parties</h3>
                   <div class="price">
-                    <p><span>$189</span></p>
+                   
                   </div>
                   <p class="fst-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.
+                  Birthday parties are joyous celebrations that mark the anniversary of a person's birth. They are typically filled with excitement, laughter, and a sense of camaraderie among friends and loved ones. While the specifics of birthday parties can vary widely depending on personal preferences, cultural traditions, and age groups.
                   </p>
                   <ul>
-                    <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                    <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                    <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                    <li><i class="bi bi-check-circle"></i> Birthday parties bring together a diverse group of guests.</li>
+                    <li><i class="bi bi-check-circle"></i> Birthday parties often feature a range of activities to entertain guests.</li>
+                    <li><i class="bi bi-check-circle"></i> There might be additional entertainment options.</li>
                   </ul>
                   <p>
-                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur
+                  They are filled with happiness, laughter, and a sense of shared joy, creating memories that will be cherished for years to come.  
                   </p>
                 </div>
               </div>
@@ -447,20 +448,17 @@ $gallery = $conn->query($sqlGallery);
                 <div class="col-lg-6 pt-4 pt-lg-0 content">
                   <h3>Private Parties</h3>
                   <div class="price">
-                    <p><span>$290</span></p>
                   </div>
                   <p class="fst-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.
+                  Private parties are social gatherings organized by individuals or groups for personal celebrations, entertainment, or special occasions.Private parties can be organized for various reasons, including birthdays, anniversaries, engagements, weddings, graduations, housewarmings, and holidays.
                   </p>
                   <ul>
-                    <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                    <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                    <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                    <li><i class="bi bi-check-circle"></i> Private parties can be organized for various reasons.</li>
+                    <li><i class="bi bi-check-circle"></i> Private parties provide an opportunity to celebrate milestones</li>
+                    <li><i class="bi bi-check-circle"></i> Comprehensive event planning and coordination for a seamless private party.</li>
                   </ul>
                   <p>
-                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur
+                    It's advisable to familiarize yourself with the local laws and regulations when planning a private party to ensure compliance and a successful event.
                   </p>
                 </div>
               </div>
@@ -472,22 +470,20 @@ $gallery = $conn->query($sqlGallery);
                   <img src="assets/img/event-custom.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0 content">
-                  <h3>Custom Parties</h3>
+                  <h3>Custom Celebrations</h3>
                   <div class="price">
                     <p><span>$99</span></p>
                   </div>
                   <p class="fst-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.
+                  We offer customizable packages to suit your preferences and requirements. Whether it's a birthday celebration, anniversary, or any special occasion, we provide the flexibility for you to set your desired packages and inclusions.
                   </p>
                   <ul>
-                    <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                    <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                    <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                    <li><i class="bi bi-check-circle"></i> Customizable packages tailored to your needs.</li>
+                    <li><i class="bi bi-check-circle"></i> Select your desired inclusions for a personalized experience.</li>
+                    <li><i class="bi bi-check-circle"></i> Perfect for birthdays, anniversaries, and special occasions.</li>
                   </ul>
                   <p>
-                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur
+                  Customizable packages for personalized private parties, ensuring a unique and memorable experience tailored to your preferences and celebration.
                   </p>
                 </div>
               </div>
@@ -647,6 +643,7 @@ $gallery = $conn->query($sqlGallery);
       </div>
     </section><!-- End Chefs Section -->
 
+    
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials">
       <div class="container position-relative">
@@ -654,87 +651,38 @@ $gallery = $conn->query($sqlGallery);
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
           <div class="swiper-wrapper">
 
+          <?php
+            while($rows = mysqli_fetch_assoc($feedback)):   
+    ?>
+
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
+                <h3><?= $rows['username'] ?></h3>
+                <h4><?= $rows['subject'] ?></h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Christine's Filipino Cuisine is a true haven for Filipino food enthusiasts. Their Adobo is a masterpiece, with tender chicken cooked in a flavorful soy-vinegar marinade that leaves a delightful tang on the palate. The warm and welcoming atmosphere adds to the overall enjoyment of the dining experience.                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  <?= $rows['message'] ?>
                 </p>
               </div>
             </div><!-- End testimonial item -->
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Food Vlogger</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  When it comes to authentic Filipino cuisine, Christine's Filipino Cuisine stands out. The Sinigang, with its perfectly balanced sour broth and tender meat, is a true comfort food. The friendly staff and cozy setting make dining here a delightful experience.                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
+            <?php 
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Visitor</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Christine's Filipino Cuisine never fails to impress with their mouthwatering Lechon Kawali. The crispy pork belly is cooked to perfection, boasting a golden-brown exterior and tender, juicy meat inside. This dish alone is worth a visit, and the attentive service adds to the overall satisfaction.                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
+endwhile;
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Foodie</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Christine's Filipino Cuisine captures the essence of Filipino flavors in their Kare-Kare. The rich peanut sauce, paired with tender oxtail and vegetables, creates a harmonious combination that is both comforting and satisfying. The friendly staff and cozy atmosphere make dining here an absolute pleasure.                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  At Christine's Filipino Cuisine, their Pancit Canton is a true delight. The stir-fried noodles are packed with flavorful ingredients, such as succulent shrimp, tender chicken, and fresh vegetables. The generous portions and attentive service make it a top choice for experiencing the best of Filipino cuisine.                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
+?>
           </div>
           <div class="swiper-pagination"></div>
         </div>
 
       </div>
     </section><!-- End Testimonials Section -->
+
+    
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">

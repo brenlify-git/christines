@@ -56,7 +56,7 @@ include '../config/connection.php';
        <div class="col-lg-12">
           <div class="row">
 
-         <h1 style="text-align:center">Welcome <b>Mr. Brenley</b>  to your dashboard!</h1> 
+         <h1 style="text-align:center">Welcome <b><?=  $_SESSION['firstName']  ?></b>  to your dashboard!</h1> 
 
         </div><!-- End Right side columns -->
       </div>

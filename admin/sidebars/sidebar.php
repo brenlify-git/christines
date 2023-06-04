@@ -74,7 +74,7 @@
                     <li>
                         <a href="../content-control/food-gallery.php">
                             <i class="bi bi-images" style="font-size: 15px;"></i>
-                            <span>Food Gallery</span>
+                            <span>Image Gallery</span>
                         </a>
                     </li>
                 </ul>
@@ -82,11 +82,16 @@
 
             </li><!-- End Tables Nav -->
 
-            
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="../reports/report-feedback.php">
+                    <i class="bi bi-clipboard2-data"></i>
+                    <span>Reports</span>
+                </a>
+            </li><!-- End Error 404 Page Nav -->
 
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="../config/logout.php">
+                <a class="nav-link collapsed" href="../config/logout.php    ">
                     <i class="bi bi-box-arrow-left"></i>
                     <span>Log out</span>
                 </a>

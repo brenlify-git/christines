@@ -1,4 +1,13 @@
+<?php 
 
+include '../config/connection.php';
+
+$sql = "SELECT * FROM menu_list";
+
+$id = $conn->query($sql);
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +15,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>InFuse | Upgrade to Driver</title>
+    <title>Christines | Menu</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -55,23 +64,113 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Update Logo and Branding</h1>
+            <h1>Menu</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="../dashboards/dashboard.php">Home</a></li>
-                    <li class="breadcrumb-item active">Logo and Branding</li>
+                    <li class="breadcrumb-item active">Menu</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
 
-
         <section class="section">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <!-- table starts here -->
+
+            <div class="card">
+                <div class="card-body">
+                        <h2 class="card-title">You may edit the images on the web here.</h2>
+
+                        <?php
+
+                        ?>
+
+                        <div class="overflow-auto mt-4">
+
+                            <!-- Table with stripped rows -->
+                            <table class="table table-hover  table-bordered text-center"
+                                style="height:200px; overflow:scroll;  vertical-align: center;">
+                                <thead class="table-secondary" style="position:sticky; top: 1 ;">
+                                    <tr>
+                                        <th scope="col">Menu ID</th>
+                                        <th scope="col">Dish Name</th>
+                                        <th scope="col">Short Description</th>
+                                        <th scope="col">Dish Category</th>
+                                        <th scope="col">Dish Price</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                <?php
+                                    while($tbl_bookinfo = mysqli_fetch_assoc($id)):   
+
+
+                                        if ($tbl_bookinfo['dishStatus'] == "hidden"){
+                                            $eyeType = 'eye-slash';
+                                            $btnType = 'danger';
+                                        }
+                                        else if ($tbl_bookinfo['dishStatus'] == "showed"){
+                                            $eyeType = 'eye';
+                                            $btnType = 'success';
+                                        }
+                                ?>
+                                
+                                    <form action="../auth-process/process-food-gallery-show.php" method="post" enctype="multipart/form-data">
+                                        <tr>
+                                            <input type="hidden" name="typeBTN" value="<?=$btnType?>">
+                                            <input type="hidden" name="menuID" value="<?=$tbl_bookinfo['menuID'];?>">
+                                            <td><?= $tbl_bookinfo['menuID'];?></td> 
+                                            <td class="align-middle"><b><?= $tbl_bookinfo['dishName'];?></b></td>   
+                                            <td><?= $tbl_bookinfo['shortDesc'];?></td>   
+                                            <td><?= $tbl_bookinfo['dishCat'];?></td>   
+                                            <td><?= $tbl_bookinfo['price'];?></td>   
+                                            <td class="align-middle">
+                                                <button type="submit" class="btn btn-<?= $btnType ?>"><i class="bi bi-<?=$eyeType ?>"></i></button>
+                                            </td>     
+                                            
+                                        </tr>
+                                    </form>                                
+
+                                <?php
+                                    endwhile;
+                                ?>
+
+
+                                </tbody>
+                            </table>
+                            <!-- End Table with stripped rows -->
+
+                        </div>
+
+                  
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="se ction">
             <div class="row">
                 <div class="col-lg-12">
 
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">LTO COR Details </h5>
+                            <h5 class="card-title">Dish Details</h5>
 
                             <?php
 

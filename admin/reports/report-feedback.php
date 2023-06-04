@@ -2,16 +2,12 @@
 
 include '../config/connection.php';
 
-
-
-$sql = "SELECT * FROM imagegallery";
+$sql = "SELECT * FROM feedbacks";
 
 $id = $conn->query($sql);
 
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,13 +15,13 @@ $id = $conn->query($sql);
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Christines | Food Gallery</title>
+    <title>Christines | Reports</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/logo.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="../assets/img/logo.png" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -46,29 +42,33 @@ $id = $conn->query($sql);
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/table.css">
 
+    <style>
+        .require {
+            color: red;
+        }
+    </style>
+
 </head>
 
 <body>
-
     <!-- ======= Sidebar and Header ======= -->
-
     <?php include '../headerbars/headerbar.php';?>
     <?php include '../sidebars/sidebar.php';
     
    
     ?>
 
-    <!-- End Sidebar and Header-->
 
+    <!-- End Sidebar and Header-->
 
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Image Gallery</h1>
+            <h1>Reports</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="../dashboards/dashboard.php">Home</a></li>
-                    <li class="breadcrumb-item active">Image Gallery</li>
+                    <li class="breadcrumb-item active">Feedback Reports</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
@@ -81,37 +81,45 @@ $id = $conn->query($sql);
 
             <div class="card">
                 <div class="card-body">
-                        <h2 class="card-title">You may edit the images on the web here.</h2>
+                        <h2 class="card-title">Overall feedback from the visitors.</h2>
+
+                        <?php
+
+                        ?>
 
                         <div class="overflow-auto mt-4">
 
                             <!-- Table with stripped rows -->
-                            <table class="table table-hover  table-bordered text-nowrap text-center"
+                            <table class="table table-hover  table-bordered text-center"
                                 style="height:200px; overflow:scroll;  vertical-align: center;">
                                 <thead class="table-secondary" style="position:sticky; top: 1 ;">
                                     <tr>
-                                        <th scope="col">Image ID</th>
-                                        <th scope="col">Image</th>
-                                        <th scope="col">New File Upload</th>
-                                        <th scope="col">Action</th>
+                                        <th scope="col">Feedback ID</th>
+                                        <th scope="col">Visitor's Name</th>
+                                        <th scope="col">Subject</th>
+                                        <th scope="col">Message</th>
+                                        <th scope="col">Date Submitted</th>
+                       
                                     </tr>
                                 </thead>
                                 <tbody>
 
                                 <?php
                                     while($tbl_bookinfo = mysqli_fetch_assoc($id)):   
+
+
+                                      
                                 ?>
                                 
-                                    <form action="../auth-process/process-food-gallery.php" method="post" enctype="multipart/form-data">
+                                    <form action="../auth-process/process-food-gallery-show.php" method="post" enctype="multipart/form-data">
                                         <tr>
-                                            <input type="hidden" name="galleryID" value="<?=$tbl_bookinfo['galleryID'];?>">
-                                            <td class="align-middle"><b><h4><?= $tbl_bookinfo['galleryID'];?></h4></b></td>
-                                            <td ><img src="<?= "../../".$tbl_bookinfo['imagePath']; ?>" alt="" style="width:200px;"></td>   
-                                            <td class="align-middle"><input class="form-control" type="file" id="newImagePath" name="newImagePath" required> </td>
-
-                                            <td class="align-middle">
-                                                <button type="submit" class="btn btn-success"><i class="bi bi-arrow-clockwise"></i> Update Image</button>
-                                            </td>     
+                                          
+                                            <td><?= $tbl_bookinfo['feedbackID'];?></td> 
+                                            <td><?= $tbl_bookinfo['username'];?></td>  
+                                            <td><?= $tbl_bookinfo['subject'];?></td>   
+                                            <td><?= $tbl_bookinfo['message'];?></td>   
+                                            <td><?= $tbl_bookinfo['dateSent'];?></td>   
+                                          
                                             
                                         </tr>
                                     </form>                                
@@ -138,7 +146,15 @@ $id = $conn->query($sql);
 </section>
 
 
+
+
+
+
+
+
     </main><!-- End #main -->
+
+
 
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
